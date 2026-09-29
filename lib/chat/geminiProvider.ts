@@ -17,7 +17,11 @@ export interface GeminiProviderConfig {
   timeoutMs?: number;
 }
 
-const DEFAULT_MODEL = "gemini-2.0-flash";
+// Алиас, а не закреплённая версия: Google отзывает старые модели
+// (на gemini-2.0-flash и 2.5-flash уже отдаётся 404 «no longer
+// available»), а latest сам подхватывает актуальную. Пин версии
+// протухает и роняет ассистента без всякой правки кода.
+const DEFAULT_MODEL = "gemini-flash-latest";
 const DEFAULT_TIMEOUT_MS = 25_000;
 
 // Google периодически отдаёт 503 «high demand» на загруженных моделях.
