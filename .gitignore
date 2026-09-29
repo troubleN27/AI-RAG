@@ -70,3 +70,10 @@ Thumbs.db
 .cache/
 # Секреты локально (service account JSON, ключи)
 secrets/
+
+# Артефакты локальной SQLite-оболочки turso
+login
+login-wal
+login-shm
+*.db-wal
+*.db-shm
