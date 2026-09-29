@@ -61,31 +61,3 @@ export class TursoSink implements LeadSink {
     });
   }
 }
-
-/**
- * Сколько раз этот номер уже присылал заявку за последние 24 часа.
- *
- * Форма перезагружают, кнопку жмут дважды, Connection-ов на Vercel
- * несколько. Дубликаты стоит отсекать на записи, а не полагаться на
- * то, что их не будет.
- */
-export async function countRecentByPhone(
-  phone: string,
-  withinHours = 24,
-): Promise<number> {
-  const db = getDb();
-  if (!db) return 0;
-
-  const result = await db.execute({
-    sql: `
-      SELECT COUNT(*) AS n
-      FROM leads
-      WHERE phone_normalized = ?
-        AND status != 'rejected'
-        AND created_at >= datetime('now', ?)
-    `,
-    args: [normalizePhone(phone), `-${withinHours} hours`],
-  });
-
-  return Number(result.rows[0]?.n ?? 0);
-}
