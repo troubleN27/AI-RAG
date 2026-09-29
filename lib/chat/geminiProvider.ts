@@ -20,6 +20,27 @@ export interface GeminiProviderConfig {
 const DEFAULT_MODEL = "gemini-2.0-flash";
 const DEFAULT_TIMEOUT_MS = 25_000;
 
+// Google периодически отдаёт 503 «high demand» на загруженных моделях.
+// Это транзиентная ошибка: без повтора она превращается в 500 для
+// пользователя, хотя через пару секунд тот же запрос проходит.
+const MAX_ATTEMPTS = 3;
+const RETRY_DELAY_MS = [400, 1200];
+
+/** Статусы, на которых есть смысл повторить запрос. */
+function isTransientStatus(status: number): boolean {
+  return (
+    status === 429 ||
+    status === 500 ||
+    status === 502 ||
+    status === 503 ||
+    status === 504
+  );
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 // ==========================================================
 // System prompt
 // ==========================================================
@@ -179,52 +200,85 @@ export class GeminiProvider implements ChatProvider {
       `${encodeURIComponent(this.model)}:generateContent?key=` +
       `${encodeURIComponent(this.apiKey)}`;
 
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), this.timeoutMs);
-    const onExternalAbort = () => controller.abort();
-    signal?.addEventListener("abort", onExternalAbort, { once: true });
+    // Бюджет времени общий на все попытки: три попытки по 25 секунд
+    // не поместились бы в лимит функции.
+    const deadline = Date.now() + this.timeoutMs;
+    let lastError: Error | null = null;
 
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-        signal: controller.signal,
-      });
+    for (let attempt = 1; ; attempt++) {
+      const remaining = deadline - Date.now();
+      if (remaining <= 0) break;
 
-      if (!response.ok) {
-        const text = await response.text().catch(() => "");
-        throw new Error(
-          `Gemini API ответил ${response.status}: ${text.slice(0, 300)}`,
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), remaining);
+      const onExternalAbort = () => controller.abort();
+      signal?.addEventListener("abort", onExternalAbort, { once: true });
+
+      // Сетевой сбой по умолчанию считаем повторяемым; явный
+      // не-транзиентный HTTP-стат его переопределит.
+      let retryable = true;
+
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          const text = await response.text().catch(() => "");
+          retryable = isTransientStatus(response.status);
+          throw new Error(
+            `Gemini API ответил ${response.status}: ${text.slice(0, 300)}`,
+          );
+        }
+
+        const data = (await response.json()) as GeminiResponseBody;
+
+        if (data.promptFeedback?.blockReason) {
+          return {
+            answer:
+              "Извините, не могу ответить на этот вопрос. Если у вас есть вопрос об обучении — задайте его, пожалуйста, иначе.",
+            suggested_actions: DEFAULT_ACTIONS,
+          };
+        }
+
+        const answer = extractAnswer(data);
+
+        if (!answer) {
+          return {
+            answer: FALLBACK_ANSWER,
+            suggested_actions: DEFAULT_ACTIONS,
+          };
+        }
+
+        return {
+          answer,
+          suggested_actions: DEFAULT_ACTIONS,
+        };
+      } catch (error) {
+        // Клиент отключился — повторять бессмысленно
+        if (signal?.aborted) throw error;
+        if (!retryable || attempt >= MAX_ATTEMPTS) throw error;
+
+        lastError = error instanceof Error ? error : new Error(String(error));
+        // eslint-disable-next-line no-console
+        console.warn(
+          `[chat] попытка ${attempt}/${MAX_ATTEMPTS} не удалась, повторяем:`,
+          lastError.message,
         );
+      } finally {
+        clearTimeout(timer);
+        signal?.removeEventListener("abort", onExternalAbort);
       }
 
-      const data = (await response.json()) as GeminiResponseBody;
-
-      if (data.promptFeedback?.blockReason) {
-        return {
-          answer:
-            "Извините, не могу ответить на этот вопрос. Если у вас есть вопрос об обучении — задайте его, пожалуйста, иначе.",
-          suggested_actions: DEFAULT_ACTIONS,
-        };
-      }
-
-      const answer = extractAnswer(data);
-
-      if (!answer) {
-        return {
-          answer: FALLBACK_ANSWER,
-          suggested_actions: DEFAULT_ACTIONS,
-        };
-      }
-
-      return {
-        answer,
-        suggested_actions: DEFAULT_ACTIONS,
-      };
-    } finally {
-      clearTimeout(timeout);
-      signal?.removeEventListener("abort", onExternalAbort);
+      if (deadline - Date.now() <= 0) break;
+      const delay = RETRY_DELAY_MS[attempt - 1];
+      if (delay === undefined) break;
+      await sleep(delay);
     }
+
+    throw lastError ?? new Error("Gemini API не ответил");
   }
 }
