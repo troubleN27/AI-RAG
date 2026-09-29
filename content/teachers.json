@@ -1,0 +1,133 @@
+[
+  {
+    "id": "teacher-01",
+    "name": "Алексей Ковалёв",
+    "position": "Senior Frontend-разработчик, преподаватель",
+    "experienceYears": 9,
+    "bio": "Более 9 лет в веб-разработке. Работал над продуктовыми интерфейсами для финтеха и e-commerce. Специализируется на React, TypeScript и архитектуре SPA. Ведёт курсы по фронтенду и мобильной разработке на Flutter.",
+    "achievements": [
+      "Ex-Яндекс, ex-Tinkoff",
+      "Наставник 200+ junior-разработчиков",
+      "Автор курса по React + TypeScript"
+    ],
+    "courseIds": ["frontend-developer", "mobile-flutter"],
+    "links": [
+      { "type": "telegram", "url": "https://t.me/" },
+      { "type": "linkedin", "url": "https://linkedin.com/" }
+    ]
+  },
+  {
+    "id": "teacher-02",
+    "name": "Дмитрий Сафронов",
+    "position": "Backend-разработчик, Team Lead",
+    "experienceYears": 11,
+    "bio": "Проектирует высоконагруженные сервисы на Python и Go. Преподаёт backend-разработку, архитектуру и DevOps-практики. Помогает студентам перейти от учебных задач к продакшену.",
+    "achievements": [
+      "Архитектор сервисов с нагрузкой 1M+ запросов в сутки",
+      "Спикер отраслевых конференций",
+      "Ментор в акселераторах"
+    ],
+    "courseIds": ["frontend-developer", "python-backend"],
+    "links": [
+      { "type": "linkedin", "url": "https://linkedin.com/" }
+    ]
+  },
+  {
+    "id": "teacher-03",
+    "name": "Марина Гуляева",
+    "position": "Преподаватель программирования для детей",
+    "experienceYears": 7,
+    "bio": "Педагог и программист. Специализируется на обучении детей 8–14 лет программированию, робототехнике и основам Computer Science. Использует игровые и проектные методики.",
+    "achievements": [
+      "Подготовила 400+ детей к олимпиадам по программированию",
+      "Автор методики обучения Python для школьников",
+      "Наставник детских хакатонов"
+    ],
+    "courseIds": ["python-backend", "kids-python", "kids-robotics"],
+    "links": [
+      { "type": "telegram", "url": "https://t.me/" }
+    ]
+  },
+  {
+    "id": "teacher-04",
+    "name": "Екатерина Орлова",
+    "position": "Product Designer, преподаватель UX/UI",
+    "experienceYears": 8,
+    "bio": "Продуктовый дизайнер с опытом в продуктовых командах и агентствах. Работала над интерфейсами банковских приложений, маркетплейсов и SaaS-продуктов. Преподаёт UX-исследования, UI-дизайн и дизайн-системы.",
+    "achievements": [
+      "Дизайн-лид в двух стартапах",
+      "Спикер Design Weekend",
+      "Наставник в дизайн-сообществах"
+    ],
+    "courseIds": ["ux-ui-design", "graphic-design"],
+    "links": [
+      { "type": "instagram", "url": "https://instagram.com/" },
+      { "type": "telegram", "url": "https://t.me/" }
+    ]
+  },
+  {
+    "id": "teacher-05",
+    "name": "Ильдар Мухамеджанов",
+    "position": "Digital-маркетолог, Head of Growth",
+    "experienceYears": 10,
+    "bio": "Более 10 лет в digital-маркетинге. Запускал кампании для e-commerce, EdTech и B2B. Специализируется на performance-маркетинге, аналитике и построении воронок.",
+    "achievements": [
+      "Управлял рекламными бюджетами от $500k/мес",
+      "Спикер международных конференций",
+      "Автор курса по growth-маркетингу"
+    ],
+    "courseIds": ["digital-marketing", "smm-management"],
+    "links": [
+      { "type": "telegram", "url": "https://t.me/" },
+      { "type": "linkedin", "url": "https://linkedin.com/" }
+    ]
+  },
+  {
+    "id": "teacher-06",
+    "name": "Ольга Смирнова",
+    "position": "Преподаватель английского языка (CELTA)",
+    "experienceYears": 12,
+    "bio": "Сертифицированный преподаватель английского (CELTA, DELTA). Готовит студентов к международным экзаменам IELTS и TOEFL, работает с уровнями B1–C2. Использует коммуникативную методику.",
+    "achievements": [
+      "CELTA, DELTA, IELTS 8.5",
+      "Подготовила 300+ студентов к сдаче IELTS 7.0+",
+      "Преподавала в международных школах"
+    ],
+    "courseIds": ["english-b1", "english-c1"],
+    "links": [
+      { "type": "linkedin", "url": "https://linkedin.com/" }
+    ]
+  },
+  {
+    "id": "teacher-07",
+    "name": "Анна Вебер",
+    "position": "Преподаватель немецкого языка (Goethe)",
+    "experienceYears": 9,
+    "bio": "Носитель немецкого языка с опытом преподавания в Узбекистане и Германии. Готовит студентов к экзаменам Goethe-Zertifikat (A1–B2) и к переезду. Ведёт разговорные клубы.",
+    "achievements": [
+      "Сертификат Goethe-Zertifikat C2",
+      "Подготовила 250+ студентов к Goethe A1–B2",
+      "Организатор языковых клубов"
+    ],
+    "courseIds": ["english-c1", "german-a1"],
+    "links": [
+      { "type": "site", "url": "https://example.com" }
+    ]
+  },
+  {
+    "id": "teacher-08",
+    "name": "Рустам Ахмедов",
+    "position": "Project Manager, преподаватель управления проектами",
+    "experienceYears": 13,
+    "bio": "Руководил крупными IT-проектами в банках и телекоме. Сертифицирован PMP и PSM I. Преподаёт управление проектами, Agile и финансовую грамотность для руководителей.",
+    "achievements": [
+      "PMP, PSM I, PMI-ACP",
+      "Провёл 50+ проектов с бюджетом от $1M",
+      "Корпоративный тренер в ведущих компаниях"
+    ],
+    "courseIds": ["project-management", "financial-literacy"],
+    "links": [
+      { "type": "linkedin", "url": "https://linkedin.com/" }
+    ]
+  }
+]

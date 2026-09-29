@@ -1,0 +1,36 @@
+{
+  "name": "Образовательный центр «Прогресс»",
+  "shortName": "Прогресс",
+  "tagline": "Современное обучение с заботой о результате",
+  "phone": "+998 71 200 00 00",
+  "email": "info@example.com",
+  "addresses": [
+    {
+      "label": "Главный офис",
+      "address": "г. Ташкент, ул. Амира Темура, 108",
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.099!2d69.279!3d41.311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE4JzM5LjYiTiA2OcKwMTYnNDQuNCJF!5e0!3m2!1sru!2s!4v1700000000000",
+      "lat": 41.311,
+      "lng": 69.279
+    }
+  ],
+  "workingHours": "Пн–Сб: 09:00–20:00 · Вс: выходной",
+  "socials": [
+    { "type": "instagram", "url": "https://instagram.com/" },
+    { "type": "telegram", "url": "https://t.me/" },
+    { "type": "youtube", "url": "https://youtube.com/" }
+  ],
+  "messengers": [
+    { "type": "telegram", "url": "https://t.me/" },
+    { "type": "whatsapp", "url": "https://wa.me/998712000000" }
+  ],
+  "legal": {
+    "company": "ООО «Образовательный центр Прогресс»",
+    "details": "ИНН 300000000 · Рег. № 0000000 от 01.01.2020"
+  },
+  "stats": [
+    { "value": 12, "suffix": " лет", "label": "Опыта на рынке" },
+    { "value": 8500, "suffix": "+", "label": "Выпускников" },
+    { "value": 47, "suffix": "", "label": "Преподавателей-экспертов" },
+    { "value": 96, "suffix": "%", "label": "Довольных студентов" }
+  ]
+}

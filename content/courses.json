@@ -1,0 +1,489 @@
+[
+  {
+    "id": "frontend-developer",
+    "title": "Frontend-разработчик",
+    "directionId": "programming",
+    "shortDescription": "React, TypeScript, современный инструментарий и работа в команде над реальными продуктами.",
+    "description": "Полный курс по фронтенд-разработке: от основ HTML/CSS и JavaScript до продвинутых возможностей React, TypeScript, сборки и деплоя. В конце курса вы соберёте портфолио из 4–5 проектов и будете готовы к собеседованию на позицию Junior Frontend Developer.",
+    "duration": "6 месяцев",
+    "format": "hybrid",
+    "level": "beginner",
+    "price": { "amount": 6900000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-15",
+    "schedule": "Пн/Ср/Пт, 18:30–20:30",
+    "outcomes": [
+      "Уверенно работать с HTML, CSS и современным JavaScript",
+      "Разрабатывать SPA на React и TypeScript",
+      "Работать с REST API и состоянием приложения",
+      "Собирать проекты с Vite/Next.js и деплоить их",
+      "Проходить технические интервью"
+    ],
+    "program": [
+      {
+        "module": "Основы веба",
+        "topics": ["HTML5 и семантика", "CSS: Flexbox, Grid", "Адаптивная вёрстка", "Git и GitHub"]
+      },
+      {
+        "module": "JavaScript",
+        "topics": ["Синтаксис и типы", "DOM и события", "Асинхронность, Promise, async/await", "Fetch API"]
+      },
+      {
+        "module": "React + TypeScript",
+        "topics": ["Компоненты и хуки", "Типизация пропсов и состояния", "React Router", "Управление формами"]
+      },
+      {
+        "module": "Инструменты и проекты",
+        "topics": ["Vite, ESLint, Prettier", "Работа в команде", "Финальный проект и подготовка к интервью"]
+      }
+    ],
+    "teacherIds": ["teacher-01", "teacher-02"],
+    "badge": "Хит"
+  },
+  {
+    "id": "python-backend",
+    "title": "Backend-разработчик на Python",
+    "directionId": "programming",
+    "shortDescription": "Django, FastAPI, базы данных и построение продакшен-сервисов с нуля.",
+    "description": "Курс для тех, кто хочет разрабатывать серверную часть веб-приложений. Изучим Python, Django, FastAPI, PostgreSQL, Docker и основы архитектуры сервисов. Итоговый проект — backend для полноценного веб-приложения.",
+    "duration": "7 месяцев",
+    "format": "online",
+    "level": "intermediate",
+    "price": { "amount": 7400000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-01",
+    "schedule": "Вт/Чт/Сб, 19:00–21:00",
+    "outcomes": [
+      "Писать сервисы на Python 3.12+",
+      "Разрабатывать REST API на Django и FastAPI",
+      "Работать с PostgreSQL и ORM",
+      "Контейнеризировать приложения в Docker",
+      "Разворачивать приложения на сервере"
+    ],
+    "program": [
+      {
+        "module": "Python",
+        "topics": ["Типы и структуры данных", "ООП", "Работа с файлами и сетью", "Тестирование"]
+      },
+      {
+        "module": "Django и FastAPI",
+        "topics": ["MVT/MVC", "ORM, миграции, админка", "Аутентификация и права", "Валидация и сериализация"]
+      },
+      {
+        "module": "Данные и инфраструктура",
+        "topics": ["PostgreSQL", "Redis и кеширование", "Docker и docker-compose", "CI/CD"]
+      }
+    ],
+    "teacherIds": ["teacher-02", "teacher-03"]
+  },
+  {
+    "id": "mobile-flutter",
+    "title": "Мобильная разработка на Flutter",
+    "directionId": "programming",
+    "shortDescription": "Кроссплатформенные мобильные приложения для iOS и Android на одном фреймворке.",
+    "description": "Научитесь создавать красивые и производительные мобильные приложения на Flutter и Dart. Публикация в App Store и Google Play, работа с API, локальным хранилищем и состоянием приложения.",
+    "duration": "5 месяцев",
+    "format": "offline",
+    "level": "beginner",
+    "price": { "amount": 6200000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-20",
+    "schedule": "Пн/Ср/Пт, 18:00–20:00",
+    "outcomes": [
+      "Разрабатывать приложения на Flutter",
+      "Работать с состоянием: Provider, Riverpod",
+      "Интегрировать REST API и локальную БД",
+      "Публиковать приложения в сторах"
+    ],
+    "program": [
+      {
+        "module": "Основы Dart и Flutter",
+        "topics": ["Синтаксис Dart", "Виджеты и layout", "Навигация"]
+      },
+      {
+        "module": "Данные и состояние",
+        "topics": ["HTTP-запросы", "Локальная БД", "Управление состоянием"]
+      },
+      {
+        "module": "Продакшен",
+        "topics": ["Сборка и релиз", "Публикация в сторах", "Аналитика и краши"]
+      }
+    ],
+    "teacherIds": ["teacher-01"],
+    "badge": "Новый набор"
+  },
+  {
+    "id": "ux-ui-design",
+    "title": "UX/UI-дизайн",
+    "directionId": "design",
+    "shortDescription": "Проектирование интерфейсов, исследования пользователей и работа в Figma.",
+    "description": "Курс для будущих продуктовых дизайнеров. Изучите UX-исследования, информационную архитектуру, прототипирование, дизайн-системы и работу с разработчиками. Соберёте портфолио из 3 проектов.",
+    "duration": "5 месяцев",
+    "format": "hybrid",
+    "level": "beginner",
+    "price": { "amount": 5800000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-10",
+    "schedule": "Вт/Чт, 18:30–20:30 + Сб практикум",
+    "outcomes": [
+      "Проводить UX-исследования и интервью",
+      "Проектировать интерфейсы в Figma",
+      "Создавать дизайн-систему и UI-кит",
+      "Защищать дизайн перед командой и клиентом"
+    ],
+    "program": [
+      {
+        "module": "UX-основы",
+        "topics": ["Исследования и интервью", "CJM и персоны", "Информационная архитектура"]
+      },
+      {
+        "module": "UI-дизайн",
+        "topics": ["Композиция и типографика", "Цвет и контраст", "Компоненты и состояния", "Адаптив"]
+      },
+      {
+        "module": "Процесс и портфолио",
+        "topics": ["Дизайн-системы", "Хендофф разработчикам", "Портфолио и презентация"]
+      }
+    ],
+    "teacherIds": ["teacher-04"],
+    "badge": "Хит"
+  },
+  {
+    "id": "graphic-design",
+    "title": "Графический дизайн",
+    "directionId": "design",
+    "shortDescription": "Иллюстрация, брендинг, полиграфия и работа в Adobe Photoshop и Illustrator.",
+    "description": "Курс для тех, кто хочет освоить профессию графического дизайнера. Изучим основы композиции, теорию цвета, брендинг, работу с логотипами и рекламными материалами.",
+    "duration": "4 месяца",
+    "format": "offline",
+    "level": "beginner",
+    "price": { "amount": 4800000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-05",
+    "schedule": "Пн/Ср, 18:00–20:00",
+    "outcomes": [
+      "Свободно работать в Photoshop и Illustrator",
+      "Разрабатывать логотипы и айдентику",
+      "Готовить макеты к печати",
+      "Собирать портфолио графического дизайнера"
+    ],
+    "program": [
+      {
+        "module": "Основы",
+        "topics": ["Композиция", "Цвет и типографика", "Работа с растром"]
+      },
+      {
+        "module": "Вектор и брендинг",
+        "topics": ["Illustrator", "Логотипы и айдентика", "Брендбук"]
+      },
+      {
+        "module": "Печать и портфолио",
+        "topics": ["Препресс", "Полиграфия", "Оформление кейсов"]
+      }
+    ],
+    "teacherIds": ["teacher-04"]
+  },
+  {
+    "id": "digital-marketing",
+    "title": "Digital-маркетинг с нуля",
+    "directionId": "marketing",
+    "shortDescription": "Полный цикл онлайн-продвижения: стратегия, реклама, аналитика и работа с воронкой.",
+    "description": "Комплексный курс по интернет-маркетингу: как строить воронку, настраивать рекламу в Google и соцсетях, работать с контентом и аналитикой. Подойдёт начинающим специалистам и владельцам бизнеса.",
+    "duration": "4 месяца",
+    "format": "online",
+    "level": "beginner",
+    "price": { "amount": 5400000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-12",
+    "schedule": "Вт/Чт, 19:00–21:00",
+    "outcomes": [
+      "Разрабатывать маркетинговую стратегию",
+      "Настраивать рекламные кампании",
+      "Считать воронку и юнит-экономику",
+      "Работать с GA4 и Метрикой"
+    ],
+    "program": [
+      {
+        "module": "Стратегия",
+        "topics": ["Анализ рынка", "Портреты аудитории", "Позиционирование"]
+      },
+      {
+        "module": "Каналы",
+        "topics": ["Google Ads", "Meta Ads", "Контент-маркетинг", "Email"]
+      },
+      {
+        "module": "Аналитика",
+        "topics": ["GA4 и Метрика", "Юнит-экономика", "Отчётность"]
+      }
+    ],
+    "teacherIds": ["teacher-05"]
+  },
+  {
+    "id": "smm-management",
+    "title": "SMM и контент-маркетинг",
+    "directionId": "marketing",
+    "shortDescription": "Ведение соцсетей, стратегии, контент-план, креативы и продвижение через Reels.",
+    "description": "Практический курс по социальным медиа: от разработки стратегии до создания вирусного контента и работы с блогерами. Разберём кейсы и научимся измерять эффективность.",
+    "duration": "3 месяца",
+    "format": "online",
+    "level": "beginner",
+    "price": { "amount": 4200000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-18",
+    "schedule": "Пн/Ср, 19:00–21:00",
+    "outcomes": [
+      "Строить SMM-стратегию для бренда",
+      "Создавать контент-план и креативы",
+      "Настраивать таргет в соцсетях",
+      "Работать с блогерами и UGC"
+    ],
+    "program": [
+      {
+        "module": "Стратегия SMM",
+        "topics": ["Аудитория и tone of voice", "Контент-план", "Визуальный стиль"]
+      },
+      {
+        "module": "Контент",
+        "topics": ["Reels и короткие видео", "Сторис и тексты", "UGC и инфлюенс"]
+      },
+      {
+        "module": "Продвижение и аналитика",
+        "topics": ["Таргетированная реклама", "Работа с блогерами", "Отчётность"]
+      }
+    ],
+    "teacherIds": ["teacher-05"]
+  },
+  {
+    "id": "english-b1",
+    "title": "Английский язык B1",
+    "directionId": "languages",
+    "shortDescription": "Разговорный английский для уверенного общения в путешествиях и на работе.",
+    "description": "Курс для продолжающих: закрепим грамматику уровня B1, расширим словарный запас и научимся свободно говорить на повседневные и рабочие темы.",
+    "duration": "6 месяцев",
+    "format": "offline",
+    "level": "intermediate",
+    "price": { "amount": 3200000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-03",
+    "schedule": "Пн/Ср/Пт, 18:30–20:00",
+    "outcomes": [
+      "Говорить на бытовые и рабочие темы",
+      "Понимать речь носителей на слух",
+      "Писать письма и короткие эссе",
+      "Подготовиться к международным экзаменам"
+    ],
+    "program": [
+      {
+        "module": "Grammar",
+        "topics": ["Времена", "Модальные глаголы", "Conditionals"]
+      },
+      {
+        "module": "Speaking",
+        "topics": ["Small talk", "Дискуссии", "Презентации"]
+      },
+      {
+        "module": "Skills",
+        "topics": ["Listening", "Reading", "Writing"]
+      }
+    ],
+    "teacherIds": ["teacher-06"],
+    "badge": "Хит"
+  },
+  {
+    "id": "english-c1",
+    "title": "Английский язык C1 Advanced",
+    "directionId": "languages",
+    "shortDescription": "Продвинутый уровень для работы и обучения за рубежом.",
+    "description": "Курс для тех, кто хочет довести английский до уровня Advanced: свободное общение, академическое письмо, подготовка к IELTS/TOEFL.",
+    "duration": "8 месяцев",
+    "format": "hybrid",
+    "level": "advanced",
+    "price": { "amount": 4600000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-08",
+    "schedule": "Вт/Чт, 19:00–21:00 + Сб практикум",
+    "outcomes": [
+      "Свободно говорить на сложные темы",
+      "Писать эссе и аналитические тексты",
+      "Готовиться к IELTS 7.0+",
+      "Работать в международной команде"
+    ],
+    "program": [
+      {
+        "module": "Advanced Grammar",
+        "topics": ["Inversion", "Perfect tenses", "Reported speech"]
+      },
+      {
+        "module": "Academic Skills",
+        "topics": ["Essay writing", "Presentation", "Debate"]
+      },
+      {
+        "module": "Exam Prep",
+        "topics": ["IELTS Listening", "IELTS Writing", "Mock tests"]
+      }
+    ],
+    "teacherIds": ["teacher-06", "teacher-07"]
+  },
+  {
+    "id": "german-a1",
+    "title": "Немецкий язык A1",
+    "directionId": "languages",
+    "shortDescription": "Немецкий для начинающих: базовое общение и подготовка к Goethe A1.",
+    "description": "Курс для тех, кто начинает с нуля. Изучим алфавит, произношение, базовую грамматику и разговорные фразы. Подготовимся к экзамену Goethe-Zertifikat A1.",
+    "duration": "5 месяцев",
+    "format": "offline",
+    "level": "beginner",
+    "price": { "amount": 3400000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-06",
+    "schedule": "Пн/Ср, 18:00–19:30",
+    "outcomes": [
+      "Общаться на бытовые темы",
+      "Понимать простые тексты и речь",
+      "Сдать Goethe A1",
+      "Подготовиться к переезду в Германию"
+    ],
+    "program": [
+      {
+        "module": "Grundlagen",
+        "topics": ["Alphabet und Aussprache", "Begrüßungen", "Zahlen und Zeit"]
+      },
+      {
+        "module": "Grammatik",
+        "topics": ["Artikel", "Präsens", "Akkusativ"]
+      },
+      {
+        "module": "Kommunikation",
+        "topics": ["Im Restaurant", "Einkaufen", "Reisen"]
+      }
+    ],
+    "teacherIds": ["teacher-07"]
+  },
+  {
+    "id": "project-management",
+    "title": "Управление проектами",
+    "directionId": "business",
+    "shortDescription": "Agile, Scrum, Kanban и практические инструменты руководителя проекта.",
+    "description": "Практический курс по управлению проектами: классические методологии, Agile-фреймворки, работа с командой и стейкхолдерами, риски и метрики. Готовит к роли Project Manager и Product Owner.",
+    "duration": "3 месяца",
+    "format": "online",
+    "level": "intermediate",
+    "price": { "amount": 5600000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-14",
+    "schedule": "Вт/Чт, 19:00–21:00",
+    "outcomes": [
+      "Вести проекты по Agile и Waterfall",
+      "Работать с командой и стейкхолдерами",
+      "Управлять сроками, бюджетом и рисками",
+      "Готовиться к сертификации PMP/PSM"
+    ],
+    "program": [
+      {
+        "module": "Основы PM",
+        "topics": ["Жизненный цикл проекта", "Устав и планирование", "Роли в команде"]
+      },
+      {
+        "module": "Agile",
+        "topics": ["Scrum", "Kanban", "Метрики и ретро"]
+      },
+      {
+        "module": "Практика",
+        "topics": ["Управление рисками", "Работа со стейкхолдерами", "Инструменты: Jira, Notion"]
+      }
+    ],
+    "teacherIds": ["teacher-08"]
+  },
+  {
+    "id": "financial-literacy",
+    "title": "Финансовая грамотность",
+    "directionId": "business",
+    "shortDescription": "Личные финансы, инвестиции и построение финансовой стратегии.",
+    "description": "Курс для тех, кто хочет навести порядок в личных финансах: бюджет, подушка безопасности, базовые инвестиции и налоги. Без сложных терминов, с практическими инструментами.",
+    "duration": "2 месяца",
+    "format": "online",
+    "level": "beginner",
+    "price": { "amount": 2400000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-22",
+    "schedule": "Ср, 19:00–21:00",
+    "outcomes": [
+      "Составлять личный бюджет",
+      "Создавать финансовую подушку",
+      "Разбираться в базовых инвестициях",
+      "Планировать крупные покупки"
+    ],
+    "program": [
+      {
+        "module": "Деньги и бюджет",
+        "topics": ["Доходы и расходы", "Подушка безопасности", "Долги"]
+      },
+      {
+        "module": "Инвестиции",
+        "topics": ["Виды активов", "Риск и доходность", "Портфель начинающего"]
+      },
+      {
+        "module": "Налоги и планирование",
+        "topics": ["Налоги", "Страхование", "Цели на 5–10 лет"]
+      }
+    ],
+    "teacherIds": ["teacher-08"]
+  },
+  {
+    "id": "kids-python",
+    "title": "Программирование для детей 10–14 лет",
+    "directionId": "kids",
+    "shortDescription": "Python, игры и первые проекты — в игровой форме и с понятными примерами.",
+    "description": "Курс для детей, которые хотят научиться программировать. Начнём с основ Python, научимся делать игры, мини-сайты и чат-ботов. Разовьём логику и алгоритмическое мышление.",
+    "duration": "6 месяцев",
+    "format": "offline",
+    "level": "beginner",
+    "price": { "amount": 2800000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-11",
+    "schedule": "Сб, 10:00–12:00",
+    "outcomes": [
+      "Освоить основы Python",
+      "Создавать собственные игры",
+      "Работать с алгоритмами",
+      "Презентовать свои проекты"
+    ],
+    "program": [
+      {
+        "module": "Первые шаги",
+        "topics": ["Знакомство с Python", "Переменные и ввод", "Условия"]
+      },
+      {
+        "module": "Игры и логика",
+        "topics": ["Циклы", "Списки", "Мини-игры"]
+      },
+      {
+        "module": "Проект",
+        "topics": ["Собственная игра", "Презентация проекта"]
+      }
+    ],
+    "teacherIds": ["teacher-03"],
+    "badge": "Новый набор"
+  },
+  {
+    "id": "kids-robotics",
+    "title": "Робототехника для детей 8–12 лет",
+    "directionId": "kids",
+    "shortDescription": "Сборка роботов, программирование Arduino и первые инженерные проекты.",
+    "description": "Дети познакомятся с электроникой и программированием через сборку настоящих роботов. Научатся работать с Arduino, датчиками и механизмами, представят собственный проект на выставке.",
+    "duration": "5 месяцев",
+    "format": "offline",
+    "level": "beginner",
+    "price": { "amount": 3200000, "currency": "UZS", "from": true },
+    "nextStart": "2026-10-19",
+    "schedule": "Сб, 12:30–14:30",
+    "outcomes": [
+      "Собирать простые схемы и роботов",
+      "Программировать Arduino",
+      "Работать с датчиками и моторами",
+      "Защищать собственный проект"
+    ],
+    "program": [
+      {
+        "module": "Основы электроники",
+        "topics": ["Питание и схемы", "Светодиоды и кнопки", "Безопасность"]
+      },
+      {
+        "module": "Arduino",
+        "topics": ["Язык программирования", "Датчики", "Моторы"]
+      },
+      {
+        "module": "Проект",
+        "topics": ["Идея и прототип", "Сборка", "Презентация"]
+      }
+    ],
+    "teacherIds": ["teacher-03"]
+  }
+]
